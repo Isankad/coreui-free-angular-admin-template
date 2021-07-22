@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { P401Component } from './views/error/401.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -14,6 +15,13 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
+  },
+  {
+    path: '401',
+    component: P401Component,
+    data: {
+      title: 'Page 401'
+    }
   },
   {
     path: '404',
